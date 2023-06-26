@@ -10,7 +10,7 @@
 
 - [ ] Përdorimi i fonteve të përshtatshme për web-temën që keni nga Google Fonts ose self hosted.
 
-- [ ] Lejohet përdorimi i framework-ave/librarive të ndryshme për front-end.
+- [x] Lejohet përdorimi i framework-ave/librarive të ndryshme për front-end.
 
 - [ ] Backendi nuk është obligativ, por është një vlerë e shtuar e projektit nëse realizimi ka nderlidhje të mirë (bonus pikë!).
 
