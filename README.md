@@ -2,9 +2,17 @@
  
 - [x] Të përdoret GIT për version control.
 
-- [ ] Varësisht nga projekti, të përdoren shembuj të ndryshëm në shfaqjen e informacionit/produkteve, si për shembull stil i ndryshëm i  fotove, preloader, JavaScript effects etj.
+- [ ] Varësisht nga projekti, të përdoren shembuj të ndryshëm në: shfaqjen e informacionit/produkteve
+    - [ ] si për shembull stil i ndryshëm i fotove
+    - [ ] preloader
+    - [ ] JavaScript effects
 
-- [ ] Të përdoren elemente multimediale: Audio, Video, Animation, Text, Grafika etj.
+- [ ] Të përdoren elemente multimediale
+    - [ ] Audio
+    - [ ] Video
+    - [ ] Animation
+    - [ ] Text
+    - [ ] Grafika
 
 - [ ] Përdorimi i sliderit/sliderave.
 
