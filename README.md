@@ -1,4 +1,4 @@
-# web-multimedia-projekti
+# Projekti x Web Multimedia 
  
 - [x] Të përdoret GIT për version control.
 
