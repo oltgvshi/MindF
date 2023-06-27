@@ -14,7 +14,7 @@
     <!-- Scripts -->
 
 </head>
-<body>
+<body class="home">
     {{$slot}}
 </body>
 </html>
