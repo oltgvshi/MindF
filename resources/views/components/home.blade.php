@@ -15,7 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/pixi.js@7.x/dist/pixi.min.js"></script>
 
 </head>
-<body class="home">
+<body {{ $attributes }}>
     {{$slot}}
 </body>
 </html>

@@ -1,4 +1,4 @@
-<a class="illusion" href="#">
+<a class="illusion" href="/illusions/{{$illusion->id}}">
     <div class="image">
         @if (pathinfo($illusion->image_url, PATHINFO_EXTENSION) === 'mp4')
             <video src="{{ asset('storage/' . $illusion->image_url) }}" alt="{{ $illusion->name }}" autoplay loop muted>

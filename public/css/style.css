@@ -123,7 +123,6 @@ h1 small {
 }
 
 .illusion p {
-  height: 80px;
   white-space: break-spaces;
   display: block;
   font-size: 22px;
@@ -164,6 +163,38 @@ h1 small {
   transition: opacity 1s ease-in-out;
 }
 
+#leftButton, #rightButton {
+  position: fixed;
+  z-index: 999;
+  top: 40%;
+  font-family: "VT323", monospace;
+  background: none;
+  border: none;
+  font-size: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #303e4e;
+  box-shadow: -1px 1px #303e4e, -2px 2px #303e4e, -3px 3px #303e4e;
+  background: #fff;
+  padding: 5px 10px;
+  color: #303e4e;
+  transition: 0.2s ease;
+}
+#leftButton:hover, #rightButton:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+#leftButton {
+  left: 50px;
+}
+
+#rightButton {
+  right: 50px;
+}
+
 @media screen and (max-width: 768px) {
   .home {
     overflow: auto;
@@ -186,6 +217,8 @@ h1 small {
     width: 100%;
     white-space: normal;
     text-align: center;
+    display: flex;
+    flex-direction: column;
   }
   .home .illusion {
     margin: auto;
@@ -207,5 +240,8 @@ h1 small {
   }
   .mindf-wrapper {
     height: auto;
+  }
+  #leftButton, #rightButton {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
