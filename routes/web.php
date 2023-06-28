@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Illusion;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,11 +16,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('home')
+    ->with('illusions',Illusion::all());
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('dashboard')
+    ->with('illusions',Illusion::all());;
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
