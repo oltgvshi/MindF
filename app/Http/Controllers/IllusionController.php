@@ -14,6 +14,6 @@ class IllusionController extends Controller
 
     public function destroy(Illusion $illusion) {
         $illusion->delete();
-        return redirect('/dashboard/')->with('message', 'Illusion deleted successfully');
+        return redirect('/dashboard')->with('message', 'Illusion deleted successfully');
     }
 }

@@ -34,6 +34,17 @@ a{
     color: black;
 }
 
+.illusion-single{
+    font-family: 'VT323', monospace;
+    background-color: $main;
+    color: black;
+
+    .footer{
+        margin-bottom: 30px;
+        margin-inline: auto;
+    }
+}
+
 .mindf-wrapper {
     height: 100vh;
     display: flex;
@@ -199,6 +210,148 @@ h1 small {
     right: 50px;
 }
 
+.wrapper{
+    display: flex;
+}
+
+.illusion-wrapper{
+    width: 100%;
+    height: 100vh;
+    padding: 15px;
+    position: relative;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.illusion-menu{
+    position: fixed;
+    left: 0;
+    top: 30px;
+    padding: 10px;
+    background: #fff;
+    border-top: 2px solid;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    z-index: 2;
+
+    h2{
+        padding: 0;
+    }
+}
+
+.illusion-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border: 3px solid $grey;
+    box-shadow: -1px 1px $grey,-2px 2px $grey,-3px 3px $grey;
+
+    &.pixi-1 canvas{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        cursor: pointer !important;
+    }
+}
+
+.display-illusion{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about {
+    max-width: 600px;
+    margin-inline: auto;
+    font-size: 21px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    p{
+        padding-left: 0;
+        padding-right: 0;
+        margin-top: 20px;
+    }
+
+    strong{
+        font-size: 26px;
+    }
+}
+
+.instructions{
+    border: 2px solid;
+    border-right: 0;
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    max-width: 255px;
+    background: #fff;
+    
+    z-index: 2;
+
+    .description{
+        padding: 10px;
+    }
+
+    h2{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    p{
+        font-size: 18px;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.banner{
+    z-index: 3;
+    position: relative;
+}
+
+.animate{
+    font-size: 15px;
+    letter-spacing: 3px;
+    animation-name: pulse;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: center;
+    display: inline-block;
+    font-weight: 700;
+    position: absolute;
+    top: 9px;
+    left: 10px;
+    background: $main;
+    padding: 5px 4px 5px 7px;
+    border: 2px solid $grey;
+    color: $grey;
+    box-shadow: 1px 1px $grey,2px 2px $grey;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        animation-timing-function: ease-out
+    }
+
+    40% {
+        transform: scale(1.1);
+        animation-timing-function: ease-in
+    }
+
+    100% {
+        transform: scale(1);
+        animation-timing-function: ease-out
+    }
+}
+
+
 @media screen and (max-width:768px) {
     .home{
         overflow: auto;
@@ -257,5 +410,9 @@ h1 small {
 
     #leftButton, #rightButton{
         display: none;
+    }
+
+    .illusion-wrapper{
+        height: calc(100vh - 150px);
     }
 }

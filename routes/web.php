@@ -32,6 +32,18 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/illusions/pixi/1', function () {
+    return view('');
+});
+
+Route::get('/illusions/pixi/1', function () {
+    return view('illusions.pixi-1');
+});
+
+Route::get('/illusions/pixi/2', function () {
+    return view('illusions.pixi-2');
+});
+
 Route::get('/illusions/{illusion}', [IllusionController::class, 'show']);
 
 require __DIR__.'/auth.php';

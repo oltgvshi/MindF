@@ -4,7 +4,11 @@
         
         <x-slider-buttons/>
 
+        
+
         <div class="illusions">
+            <x-illusion-pixi/>
+            
             @foreach ($illusions as $illusion)
                 <x-illusion-card :illusion="$illusion"/>
             @endforeach
@@ -13,11 +17,11 @@
         
         <audio id="audio" loop>
             <source src="{{ asset('storage/psychedelic.mp3') }}" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>    
+            Your browser does not support the audio element.
+        </audio>    
             
-            <x-footer/>
-        </div>
+        <x-footer/>
+    </div>
         
 
     <script src="{{ asset('js/scrolltransform.js') }}"></script>
