@@ -10,23 +10,32 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($illusions as $illusion)
-                <tr class="bg-gray-900 ">
-                    <td class="w-20 h-11">
-                        {{-- <img src="{{ asset('storage/' . $illusion->image_url) }}" alt="{{$illusion->name}}" class="object-cover w-full h-full"> --}}
+                @foreach ($pixies as $pixi)
+                    <tr class="bg-gray-900 ">
+                        <td class="w-20 h-11">
+                            <img src="{{ asset('storage/pixi/' . $pixi->thumbnail_url) }}" alt="{{ $pixi->name }}" class="object-cover w-full h-full" loading="lazy">
+                        </td>
+                        <td class="p-3 font-bold">{{$pixi->name}}</td>
+                        <td class="p-3 font-bold">{{$pixi->description}}</td>
+                        <td>Edit</td>
+                    </tr>
+                @endforeach
 
-                        @if (pathinfo($illusion->image_url, PATHINFO_EXTENSION) === 'mp4')
-                            <video src="{{ asset('storage/' . $illusion->image_url) }}" alt="{{ $illusion->name }}" class="object-cover w-full h-full" autoplay loop muted>
-                                Your browser does not support the video tag.
-                            </video>
-                        @else
-                            <img src="{{ asset('storage/' . $illusion->image_url) }}" alt="{{ $illusion->name }}" class="object-cover w-full h-full" loading="lazy">
-                        @endif
-                    </td>
-                    <td class="p-3 font-bold">{{$illusion->name}}</td>
-                    <td class="p-3 font-bold">{{$illusion->description}}</td>
-                    <td>Delete</td>
-                </tr>
+                @foreach ($illusions as $illusion)
+                    <tr class="bg-gray-900 ">
+                        <td class="w-20 h-11">
+                            @if (pathinfo($illusion->image_url, PATHINFO_EXTENSION) === 'mp4')
+                                <video src="{{ asset('storage/' . $illusion->image_url) }}" alt="{{ $illusion->name }}" class="object-cover w-full h-full" autoplay loop muted>
+                                    Your browser does not support the video tag.
+                                </video>
+                            @else
+                                <img src="{{ asset('storage/' . $illusion->image_url) }}" alt="{{ $illusion->name }}" class="object-cover w-full h-full" loading="lazy">
+                            @endif
+                        </td>
+                        <td class="p-3 font-bold">{{$illusion->name}}</td>
+                        <td class="p-3 font-bold">{{$illusion->description}}</td>
+                        <td>Delete</td>
+                    </tr>
                 @endforeach
             </tbody>
         </table>

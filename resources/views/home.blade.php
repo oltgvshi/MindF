@@ -7,7 +7,9 @@
         
 
         <div class="illusions">
-            <x-illusion-pixi/>
+            @foreach ($pixies as $pixi)
+                <x-illusion-pixi :pixi="$pixi" />
+            @endforeach
             
             @foreach ($illusions as $illusion)
                 <x-illusion-card :illusion="$illusion"/>

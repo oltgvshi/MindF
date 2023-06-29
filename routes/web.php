@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\IllusionController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Illusion;
+use App\Models\Pixi;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,12 +19,14 @@ use App\Models\Illusion;
 
 Route::get('/', function () {
     return view('home')
-    ->with('illusions',Illusion::all());
+    ->with('illusions',Illusion::all())
+    ->with('pixies',Pixi::all());
 });
 
 Route::get('/dashboard', function () {
     return view('dashboard')
-    ->with('illusions',Illusion::all());;
+    ->with('illusions',Illusion::all())
+    ->with('pixies',Pixi::all());
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -37,7 +40,8 @@ Route::get('/illusions/pixi/1', function () {
 });
 
 Route::get('/illusions/pixi/1', function () {
-    return view('illusions.pixi-1');
+    return view('illusions.pixi-1')
+    ->with('pixi',Pixi::find(1));
 });
 
 Route::get('/illusions/pixi/2', function () {
