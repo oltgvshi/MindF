@@ -3,8 +3,6 @@ const app = new PIXI.Application({ background: '#ede6c8', resizeTo: window });
 const divElement = document.querySelector('div.illusion-image');
 divElement.appendChild(app.view);
 
-app.view.style.cursor = 'pointer'; // Set the cursor to pointer
-
 const container = new PIXI.Container();
 app.stage.addChild(container);
 
@@ -25,7 +23,7 @@ async function init() {
   wheelSprite.anchor.set(0.5);
 
   // resize the sprites
-  const scale = 0.8; // 20% smaller
+  const scale = 0.77;
   backgroundSprite.scale.set(scale);
   wheelSprite.scale.set(scale);
 

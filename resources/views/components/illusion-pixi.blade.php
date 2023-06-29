@@ -9,8 +9,8 @@
         </div>
     </div>
 
-    <h2>Pixi 1</h2>
-    <p>Test</p>
+    <h2>Disappearing Bicyclist</h2>
+    <p>Count the bicyclists, click anywhere for a small rotation, count again.</p>
 </a>
 
 {{-- <a class="illusion" href="/illusions/pixi/2">
