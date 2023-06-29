@@ -45,7 +45,8 @@ Route::get('/illusions/pixi/1', function () {
 });
 
 Route::get('/illusions/pixi/2', function () {
-    return view('illusions.pixi-2');
+    return view('illusions.pixi-2')
+    ->with('pixi',Pixi::find(2));;
 });
 
 Route::get('/illusions/{illusion}', [IllusionController::class, 'show']);

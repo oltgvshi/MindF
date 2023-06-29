@@ -245,11 +245,13 @@ h1 small {
   box-shadow: -1px 1px #303e4e, -2px 2px #303e4e, -3px 3px #303e4e;
 }
 .illusion-image.pixi-1 canvas {
+  cursor: pointer !important;
+}
+.illusion-image canvas {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  cursor: pointer !important;
 }
 
 .display-illusion {

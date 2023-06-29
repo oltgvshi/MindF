@@ -7,12 +7,12 @@
     - [ ] preloader
     - [x] JavaScript effects
 
-- [ ] Të përdoren elemente multimediale
+- [x] Të përdoren elemente multimediale
     - [x] Audio
     - [x] Video
     - [x] Animation
     - [x] Text
-    - [ ] Grafika
+    - [x] Grafika
 
 - [x] Përdorimi i sliderit/sliderave.
 
@@ -24,4 +24,4 @@
 
 - [x] Gjatë zhvillimit të projektit dhe përdorimit të shumë elementeve multimediale ngarkohet load size/load time , ju duhet ti kushtoni rendesi optimizimit.
 
-- [ ] Ne projekt duhet qe te kete se paku-minimalisht dy tipare/features te ndryshme me PixiJS ku varesisht projektit qe e keni si grup mundeni me bo : Gaming, Sliders, Effekte me Filters, PixiJS me Plugina tjere, Animated InfoGraphics, Interactive Portfolio/Maps, 360 Tour 
+- [x] Ne projekt duhet qe te kete se paku-minimalisht dy tipare/features te ndryshme me PixiJS ku varesisht projektit qe e keni si grup mundeni me bo : Gaming, Sliders, Effekte me Filters, PixiJS me Plugina tjere, Animated InfoGraphics, Interactive Portfolio/Maps, 360 Tour 
