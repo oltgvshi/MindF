@@ -22,11 +22,6 @@ async function init() {
   backgroundSprite.anchor.set(0.5);
   wheelSprite.anchor.set(0.5);
 
-  // resize the sprites
-  const scale = 0.77;
-  backgroundSprite.scale.set(scale);
-  wheelSprite.scale.set(scale);
-
   // add the background sprite to the container
   container.addChild(backgroundSprite);
 
