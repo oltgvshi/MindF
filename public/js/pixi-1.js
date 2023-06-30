@@ -49,7 +49,7 @@ function handleClick() {
 
   const targetRotation = rotated ? -Math.PI / 6 : 0; // Calculate the target rotation based on the rotated state
 
-  const rotationSpeed = 0.02; // Adjust the rotation speed to your preference
+  const rotationSpeed = 0.015; // Adjust the rotation speed to your preference
 
   // Animate the rotation using PIXI's ticker
   app.ticker.add(rotate);

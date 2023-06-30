@@ -43,5 +43,5 @@
 
       // Animate the spiral
       app.ticker.add(() => {
-        spiralContainer.rotation += 0.3;
+        spiralContainer.rotation += 0.4;
       });
