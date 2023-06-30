@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\IllusionController;
+use App\Http\Controllers\PixiController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Illusion;
 use App\Models\Pixi;
@@ -33,6 +34,15 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    
+    //Show Edit Form - Pixi
+    Route::get('/dashboard/pixi/{pixi}/edit', [PixiController::class, 'edit']);
+
+    //Update Pixi
+    Route::put('/dashboard/pixi/{pixi}', [PixiController::class, 'update']);
+
+
 
     //Show Edit Form - Illusion
     Route::get('/dashboard/{illusion}/edit', [IllusionController::class, 'edit']);

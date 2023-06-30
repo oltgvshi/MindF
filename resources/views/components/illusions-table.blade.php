@@ -20,7 +20,7 @@
                         <td style="height:44px;">
                             <div class="actions-wrapper flex items-center">
                                 <a href="/illusions/pixi/{{$pixi->id}}"><x-eye-icon/></a>
-                                <a href=""><x-edit-icon/></a>
+                                <a href="/dashboard/pixi/{{$pixi->id}}/edit"><x-edit-icon/></a>
                             </div>
                         </td>
                     </tr>
