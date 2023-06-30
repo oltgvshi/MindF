@@ -17,7 +17,12 @@
                         </td>
                         <td class="p-3 font-bold">{{$pixi->name}}</td>
                         <td class="p-3 font-bold">{{$pixi->description}}</td>
-                        <td>Edit</td>
+                        <td style="height:44px;">
+                            <div class="actions-wrapper flex items-center">
+                                <a href="/illusions/pixi/{{$pixi->id}}"><x-eye-icon/></a>
+                                <a href=""><x-edit-icon/></a>
+                            </div>
+                        </td>
                     </tr>
                 @endforeach
 
@@ -34,7 +39,17 @@
                         </td>
                         <td class="p-3 font-bold">{{$illusion->name}}</td>
                         <td class="p-3 font-bold">{{$illusion->description}}</td>
-                        <td>Delete</td>
+                        <td style="height:44px;">
+                            <div class="actions-wrapper flex items-center">
+                                <a href="/illusions/{{$illusion->id}}"><x-eye-icon/></a>
+                                <a href="/dashboard/{{$illusion->id}}/edit"><x-edit-icon/></a>
+                                <form method="POST" action="/illusions/{{$illusion->id}}" class="text-gray-400 hover:text-gray-100 inline flex items-center">
+                                    @csrf 
+                                    @method('DELETE')
+                                    <button class="text-red-500"><x-delete-icon/></button>
+                                </form>
+                            </div>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

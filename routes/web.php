@@ -33,6 +33,21 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    //Show Edit Form - Illusion
+    Route::get('/dashboard/{illusion}/edit', [IllusionController::class, 'edit']);
+
+    // Show Create Form - Illusion
+    Route::get('/dashboard/create', [IllusionController::class, 'create']);
+
+    // Store Illusion Data
+    Route::post('/dashboard', [IllusionController::class, 'store']);
+
+    //Update Illusion
+    Route::put('/dashboard/{illusion}', [IllusionController::class, 'update']);
+
+    //Delete Illusion
+    Route::delete('/illusions/{illusion}', [IllusionController::class, 'destroy'])->middleware(['auth', 'verified']);
 });
 
 Route::get('/illusions/pixi/1', function () {
@@ -48,6 +63,7 @@ Route::get('/illusions/pixi/2', function () {
     return view('illusions.pixi-2')
     ->with('pixi',Pixi::find(2));;
 });
+
 
 Route::get('/illusions/{illusion}', [IllusionController::class, 'show']);
 

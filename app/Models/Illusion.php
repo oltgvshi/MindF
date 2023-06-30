@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Illusion extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'image_url',
+        'name',
+        'description',
+        'what',
+        'how',
+    ];
 }
