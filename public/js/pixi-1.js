@@ -14,25 +14,20 @@ async function init() {
   const backgroundTexture = await PIXI.Assets.load('/storage/pixi/background.png');
   const wheelTexture = await PIXI.Assets.load('/storage/pixi/wheel.png');
 
-  // create sprites from the loaded textures
   backgroundSprite = PIXI.Sprite.from(backgroundTexture);
   wheelSprite = PIXI.Sprite.from(wheelTexture);
 
-  // center the anchor point of each sprite
   backgroundSprite.anchor.set(0.5);
   wheelSprite.anchor.set(0.5);
 
-  // add the background sprite to the container
   container.addChild(backgroundSprite);
 
-  // add the wheel sprite to the container
   container.addChild(wheelSprite);
 
   centerContainer();
   setupInteraction();
 }
 
-// Call the async function
 init();
 
 function centerContainer() {
@@ -45,24 +40,22 @@ function setupInteraction() {
 }
 
 function handleClick() {
-  rotated = !rotated; // Toggle the rotated state
+  rotated = !rotated;
 
-  const targetRotation = rotated ? -Math.PI / 6 : 0; // Calculate the target rotation based on the rotated state
+  const targetRotation = rotated ? -Math.PI / 6 : 0; 
 
-  const rotationSpeed = 0.015; // Adjust the rotation speed to your preference
+  const rotationSpeed = 0.015 ;
 
-  // Animate the rotation using PIXI's ticker
   app.ticker.add(rotate);
 
   function rotate() {
     const diff = targetRotation - wheelSprite.rotation;
 
     if (Math.abs(diff) <= rotationSpeed) {
-      // Snap to the target rotation when it's close enough
+
       wheelSprite.rotation = targetRotation;
       app.ticker.remove(rotate);
     } else {
-      // Gradually rotate towards the target rotation
       wheelSprite.rotation += rotationSpeed * Math.sign(diff);
     }
   }

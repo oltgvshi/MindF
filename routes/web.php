@@ -20,13 +20,13 @@ use App\Models\Pixi;
 
 Route::get('/', function () {
     return view('home')
-    ->with('illusions',Illusion::all())
+    ->with('illusions', Illusion::orderBy('updated_at', 'desc')->get())
     ->with('pixies',Pixi::all());
 });
 
 Route::get('/dashboard', function () {
     return view('dashboard')
-    ->with('illusions',Illusion::all())
+    ->with('illusions', Illusion::orderBy('updated_at', 'desc')->get())
     ->with('pixies',Pixi::all());
 })->middleware(['auth', 'verified'])->name('dashboard');
 
@@ -61,10 +61,6 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/illusions/pixi/1', function () {
-    return view('');
-});
-
-Route::get('/illusions/pixi/1', function () {
     return view('illusions.pixi-1')
     ->with('pixi',Pixi::find(1));
 });
@@ -73,7 +69,6 @@ Route::get('/illusions/pixi/2', function () {
     return view('illusions.pixi-2')
     ->with('pixi',Pixi::find(2));;
 });
-
 
 Route::get('/illusions/{illusion}', [IllusionController::class, 'show']);
 

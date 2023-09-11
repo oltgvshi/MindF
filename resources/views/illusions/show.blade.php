@@ -8,7 +8,7 @@
 
             <div class="illusion-image">
                 @if (pathinfo($illusion->image_url, PATHINFO_EXTENSION) === 'mp4')
-                    <video src="{{ asset('storage/' . $illusion->image_url) }}" alt="{{ $illusion->name }}" autoplay loop muted class="display-illusion">
+                    <video src="{{ asset('storage/' . $illusion->image_url) }}" alt="{{ $illusion->name }}" autoplay loop muted controls class="display-illusion">
                         Your browser does not support the video tag.
                     </video>
                 @else

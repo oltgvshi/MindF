@@ -16,7 +16,7 @@
                             <img src="{{ asset('storage/pixi/' . $pixi->thumbnail_url) }}" alt="{{ $pixi->name }}" class="object-cover w-full h-full" loading="lazy">
                         </td>
                         <td class="p-3 font-bold">{{$pixi->name}}</td>
-                        <td class="p-3 font-bold">{{$pixi->description}}</td>
+                        <td class="p-3 font-bold">{{Str::limit($pixi->description, 120)}}</td>
                         <td style="height:44px;">
                             <div class="actions-wrapper flex items-center">
                                 <a href="/illusions/pixi/{{$pixi->id}}"><x-eye-icon/></a>
@@ -38,7 +38,7 @@
                             @endif
                         </td>
                         <td class="p-3 font-bold">{{$illusion->name}}</td>
-                        <td class="p-3 font-bold">{{$illusion->description}}</td>
+                        <td class="p-3 font-bold">{{Str::limit($illusion->description, 120)}}</td>
                         <td style="height:44px;">
                             <div class="actions-wrapper flex items-center">
                                 <a href="/illusions/{{$illusion->id}}"><x-eye-icon/></a>
