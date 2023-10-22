@@ -1,4 +1,5 @@
-# Projekti x Web Multimedia 
+# Projekti x Web Multimedia [uni project]
+readme will get updated soon (ignore)
  
 - [x] Të përdoret GIT për version control.
 
